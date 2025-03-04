@@ -17,12 +17,11 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-
 @dataclass
 class GeminiClientConfig:
     """Configuration for the Gemini client."""
 
-    model: str = "gemini-2.0-flash"
+    model: str = "gemini-2.0-flash-exp"
     temperature: float = 1.0
     top_p: float = 0.95
     top_k: int = 40

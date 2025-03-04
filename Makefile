@@ -4,7 +4,7 @@ build-collector:
 
 # データ収集を実行
 collect:
-	docker run -it --env-file .env -v $(pwd)/.output:/app/output nook-collector
+	docker run -it --env-file .env -v $(PWD)/.output:/app/output nook-collector
 
 # Webサーバー用のDockerイメージをビルド
 build-viewer:
@@ -12,4 +12,4 @@ build-viewer:
 
 # Webサーバーを起動
 viewer:
-	docker run -it --env-file .env -v $(pwd)/.output:/app/output -p 8080:8080 nook-viewer
+	docker run -it --env-file .env -v $(PWD)/.output:/app/output -p 8080:8080 nook-viewer
